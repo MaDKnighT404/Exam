@@ -17,6 +17,8 @@ body {
   padding: 0;
 }
 
+/* общий блок */
+
 .general__wrapper {
   margin-top: 13px;
   padding: 0;
@@ -31,6 +33,8 @@ body {
   height: 1400px;
   background-color: #f9f9f9;
 }
+
+/* Хэадер . Логотип + навигация */
 
 .header {
   display: flex;
@@ -67,7 +71,7 @@ body {
 
 .nav__wrapper {
   position: absolute;
-  right: 1%;
+  right: 2%;
   top: 0%;
   width: 540px;
   height: 34px;
@@ -81,97 +85,172 @@ body {
   height: 34px;
 }
 
-.nav__menu__listitem {
-  /* padding: 5px; */
-}
-
-.__extend {
-  background-color: #ffbd45;
-  color: #fff;
-  border: 1px solid #efaf3f;
-  border-radius: 5px;
-  height: 27px;
-  line-height: 23px;
-  
-}
-
 .__mli4 {
   position: relative;
 }
 
 .listitem__link {
   text-decoration: none;
-  padding:30px 22px;
+  padding: 20px 23px;
   font-size: 14px;
   color: #959595;
   font-family: "Oxygen", sans-serif;
-
 }
+
+.extend__listitem {
+  background-color: #ffbd45;
+
+  border: 1px solid #efaf3f;
+  border-radius: 5px;
+  height: 27px;
+  line-height: 23px;
+}
+
+.extend__link {
+  color: #fff;
+}
+
+.listitem__link:hover {
+  font-weight: bold;
+}
+
+.listitem__link:hover:last-child {
+  font-weight: 400px;
+}
+
+/* Сабменю */
 
 .nav__submenu__wrapper {
   position: absolute;
   top: 50px;
-  left:-10px;
+  left: -10px;
   width: 166px;
   height: 156px;
-  
- 
 }
 
 .nav__submenu {
-  display: flex;
+ 
   flex-direction: column;
   font-size: 12px;
   margin-top: 3px;
   border: 1px solid #dddddd;
   color: #959595;
-  position: relative;
-  opacity: 0;
-  
-}
-
-/* вырез в бордере сверху */
-
-.nav__submenu::after {
-  content: '';
   position: absolute;
-  height: 10px;
-  width: 10px;
-  background: green;
-  border: 1px solid #dddddd;
-  transform: rotateZ(45deg);
-  top:-10px;
-  left:10px;
+  display: none;
+  opacity: 0;
+  top: -20px;
+  left: 15px;
+  z-index: 10;
+  background-color: white;
 }
 
 .submenu__listitem {
-  margin: 2px 10px;
-  padding: 7px 10px;
+  margin: 3px 10px;
+  padding: 5px 10px;
+}
 
-;
+.submenu__listitem:first-child {
+  margin-top: 10px;
 }
 
 .submenu__listitem p {
-    font-size: 10px;
+  font-size: 10px;
+  color: #afafaf;
+  margin-top: 3px;
+  width: 110%;
 }
 
 .submenu__line {
-    border: none; 
-    color: #e5e5e5; 
-    background-color: #e5e5e5; 
-    height: 1px; 
-    width: 85%;
-    margin-left: 10px;
-
+  border: none;
+  color: #e5e5e5;
+  background-color: #e5e5e5;
+  height: 1px;
+  width: 85%;
+  margin-left: 10px;
 }
 
 .submenu__listitem:hover {
-    background: #f3f3f3;
-    border-radius: 5px;
-    border: none;
+  background: #f3f3f3;
+  border-radius: 5px;
+  
 }
 
 .nav__menu__listitem:hover .nav__submenu {
+  display: flex;
   opacity: 1;
-  transition: opacity 0.5s ease-in;
+  transition: opacity 0.2s ease-in;
+}
+
+/* сабменю. Вырез в бордере сверху  */
+
+.nav__submenu::after {
+  content: "";
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  background-color: #f9f9f9;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  transform: rotateZ(45deg);
+  top: -4px;
+  left: 20px;
+}
+
+/* картинка + текст + кнопка */
+
+.pictureAndText__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 932px;
+  height: 400px;
+  margin: 100px 0 0 50px;
+  z-index: 1;
+}
+
+.header__picture {
+  width: 300px;
+  height: 190px;
+  background: url(./pictures/spaider.png);
+}
+
+.border__gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-image-source: radial-gradient(#f6f6f6, #dfdfdf);
+  border-width: 5px;
+  box-shadow: 0px 25px 10px -24px #5e686d;
+}
+
+.picture__info {
+  width: 435px;
+  margin: 10px 0 0 100px;
+}
+
+.info__header {
+  font-size: 38px;
+  color: #515151;
+  font-family: "Oxygen", sans-serif;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.info__text {
+  text-align: right;
+  color: #797979;
+  padding-right: 30px;
+  font-size: 14px;
+  font-family: "Oxygen", sans-serif;
+  line-height: 1.5em;
+}
+
+.info__header__line {
+  position: absolute;
+  border: none;
+  color: #e5e5e5;
+  background-color: #e5e5e5;
+  height: 1px;
+  width: 55%;
+  top: 115px;
+  right: 70px;
 }
