@@ -120,16 +120,17 @@ body {
 
 /* Сабменю */
 
-.nav__submenu__wrapper {
+/* .nav__submenu__wrapper {
   position: absolute;
   top: 50px;
   left: -10px;
   width: 166px;
   height: 156px;
-}
+} */
 
 .nav__submenu {
- 
+  width: 166px;
+  height: 146px;
   flex-direction: column;
   font-size: 12px;
   margin-top: 3px;
@@ -138,7 +139,7 @@ body {
   position: absolute;
   display: none;
   opacity: 0;
-  top: -20px;
+  top: 25px;
   left: 15px;
   z-index: 10;
   background-color: white;
@@ -172,7 +173,6 @@ body {
 .submenu__listitem:hover {
   background: #f3f3f3;
   border-radius: 5px;
-  
 }
 
 .nav__menu__listitem:hover .nav__submenu {
