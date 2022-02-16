@@ -82,10 +82,7 @@ body {
 }
 
 .nav__menu__listitem {
-  padding: 5px;
-  font-size: 14px;
-  color: #959595;
-  font-family: "Oxygen", sans-serif;
+  /* padding: 5px; */
 }
 
 .__extend {
@@ -94,11 +91,21 @@ body {
   border: 1px solid #efaf3f;
   border-radius: 5px;
   height: 27px;
-  line-height: 12px;
+  line-height: 23px;
+  
 }
 
 .__mli4 {
   position: relative;
+}
+
+.listitem__link {
+  text-decoration: none;
+  padding:30px 22px;
+  font-size: 14px;
+  color: #959595;
+  font-family: "Oxygen", sans-serif;
+
 }
 
 .nav__submenu__wrapper {
@@ -107,8 +114,8 @@ body {
   left:-10px;
   width: 166px;
   height: 156px;
-  border: 1px solid #dddddd;
-  /* display: none; */
+  
+ 
 }
 
 .nav__submenu {
@@ -116,6 +123,25 @@ body {
   flex-direction: column;
   font-size: 12px;
   margin-top: 3px;
+  border: 1px solid #dddddd;
+  color: #959595;
+  position: relative;
+  opacity: 0;
+  
+}
+
+/* вырез в бордере сверху */
+
+.nav__submenu::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: green;
+  border: 1px solid #dddddd;
+  transform: rotateZ(45deg);
+  top:-10px;
+  left:10px;
 }
 
 .submenu__listitem {
@@ -145,3 +171,7 @@ body {
     border: none;
 }
 
+.nav__menu__listitem:hover .nav__submenu {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
