@@ -208,10 +208,48 @@ body {
   z-index: 1;
 }
 
+/* картинка */
+
 .header__picture {
+  position: relative;
   width: 300px;
-  height: 190px;
+  height: 200px;
   background: url(./pictures/spaider.png);
+  z-index: 10;
+  background-size: cover;
+}
+
+.header__picture__arrows {
+  position: absolute;
+  z-index: 2;
+  width: 290px;
+  height: 50px;
+  background-image: url(./pictures/header\ arrow\ picture.png);
+  opacity: 0.5;
+  background-size: cover;
+  bottom: 2%;
+}
+
+.header__picture__discription1 {
+  position: absolute;
+  left:43px;
+  top:5px;
+  color: #f6f6f6;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header__picture__discription2 {
+  color:#ffc14c;
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2em;
+
+}
+.header__picture__discription3 {
+color:#4c4d4e;
+font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .border__gradient {
@@ -221,6 +259,8 @@ body {
   border-width: 5px;
   box-shadow: 0px 25px 10px -24px #5e686d;
 }
+
+/* текст */
 
 .picture__info {
   width: 435px;
@@ -233,6 +273,8 @@ body {
   font-family: "Oxygen", sans-serif;
   font-weight: 400;
   margin-bottom: 5px;
+  margin-left: -25px;
+ 
 }
 
 .info__text {
@@ -253,4 +295,56 @@ body {
   width: 55%;
   top: 115px;
   right: 70px;
+}
+
+/* кнопка */
+
+.header__picture__info__button__wrapper {
+  position: absolute;
+  width: 168px;
+  height: 43px;
+  border-radius: 3px;
+  border: 1px solid #efb74c;
+  background: #ffbd46;
+  right: 75px;
+  top:125px;
+  box-shadow: 0px 2px 14px -8px rgba(0, 0, 0, 0.99);
+}
+
+.header__picture__info__button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.header__picture__info__text1 {
+  position: absolute;
+  left:7px;
+  top:5px;
+  color:#fcf4e5;
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+}
+
+.header__picture__info__text2 {
+  position: absolute;
+  left:10px;
+  top:25px;
+  color:#d28600;
+  font-family: "Oxygen", sans-serif;
+  font-size: 10px;
+}
+
+.header__picture__info__arrow {
+  position: absolute;
+  width: 45px;
+  height: 30px;
+  right: 0;
+  top: 5px;;
+  background-image: url(./pictures/header\ arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 35%;
+  border-left:1px solid #ffc75e;
+  box-shadow: -1px 0px 0px 0px #FFB43D;
 }
