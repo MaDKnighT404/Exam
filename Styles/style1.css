@@ -203,7 +203,7 @@ body {
   display: flex;
   flex-direction: row;
   width: 932px;
-  height: 400px;
+  height: 250px;
   margin: 100px 0 0 50px;
   z-index: 1;
 }
@@ -341,6 +341,21 @@ body {
   box-shadow: -1px 0px 0px 0px #ffb43d;
 }
 
+/* начала первого блока боди */
+
+.first__body__line {
+    background-color: #e5e5e5;
+    height: 1px;
+    width: 100%;
+  }
+
+.firstpart__title {
+  margin:30px 0;
+  font-weight:lighter;
+}
+
+ 
+
 .firstpart__body__wrapper {
   border-top: 2px solid #e5e5e5;
   background: #f8f8f8;
@@ -348,27 +363,45 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 22px;
   grid-auto-rows: minmax(150px, auto);
+  
 }
+
+.firstpart__pictures__background {
+  width: 298px;
+  height: 200px;
+  background-color: black;
+  /* https://border-image.com/ */
+}
+
 
 .firstpart__pictures {
   width: 298px;
   height: 141px;
-
   background: green;
 }
 
 .b1pic1 {
   background: url(./pictures/body\ picture1.png);
+  background-size: cover;
 }
 
 .b1pic2 {
   background: url(./pictures/body\ picture2.png);
+  background-size: cover;
 }
 
 .b1pic3 {
   background: url(./pictures/body\ picture3.png);
+  background-size: cover;
 }
+
 
 .firstpart__text {
   background: green;
+  
+}
+
+.ft1 {
+  grid-column-start: 3;
+  grid-column-end: 4;
 }
