@@ -413,6 +413,13 @@ body {
   font-weight:lighter;
 }
 
+.second__body__line {
+  background-color: #e5e5e5;
+  height: 1px;
+  width: 96%;
+  margin: 0 0 10px 15px;
+}
+
 .secondpart__body__wrapper {
   width:932px;
   height:236px;
@@ -431,23 +438,110 @@ body {
 }
 
 .secondpart__nav__menulist {
-  text-align: center;
+    text-align: center;
   line-height:40px;
-  margin: 0 5px 0 5px;
+  margin: 0 5px 0 0px;
   border-right:1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   width: 93px;
   height: 43px;
   font-size: 11px;
   color:#cacaca;
-  border-bottom: 1px solid #fff;
-  background-color: green;
+ 
 }
 
 .secondpart__nav__menulist:first-child {
   border-left: none;
 }
 
-/* .nav__menulist__selected {
+.nav__menulist__selected {
 font-weight: bold;
-border-bottom: none;
-  } */
+border-bottom: 1px solid #fafafa;
+  }
+
+  .secondpart__inside__title{
+    margin: 20px 0 15px 10px;
+  }
+
+  .secondpart__inside__wrapper {
+    width: 891px;
+    height: 119px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:10px;
+    margin-left: 20px ;
+  }
+
+  .secondpart__contentbox {
+    background: gray;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .secondpart__contentbox:first-child {
+
+    justify-content: left;
+    
+ 
+  }
+
+  .secondpart__contentbox__list {
+    position: relative;
+    list-style-type: none;
+    margin-left: 10%;
+  }
+
+  .secondpart__contentbox__list > li::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 7px;
+    background: url(./pictures/secondpart\ list\ arrow.png);
+   left:-15px;
+   margin-top: 5px;
+  }
+
+  .secondpart__picture1 {
+    width:116px;
+    height: 93px;
+    background-image: url(./pictures/secondpart\ pic1.png);
+  }
+
+  .secondpart__picture2 {
+    width:116px;
+    height: 93px;
+    background-image: url(./pictures/secondpart\ pic2.png);
+  }
+.secondpart__text {
+width: 157px;
+height: 98px;
+margin-left: 5px;
+}
+
+.footer__line {
+  background-color: #e5e5e5;
+  height: 1px;
+  width: 96%;
+  margin: 40px 0 10px 15px;
+}
+
+.footer__wrapper {
+  width: 942px;
+  height:238px;
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 183px 183px 400px;
+  text-align: left;
+  grid-gap: 70px;
+}
+
+.footer__title {
+  color:#ffad19;
+}
+
+.footer__list {
+ list-style: none;
+}
+
